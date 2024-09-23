@@ -27,8 +27,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Player Sprites",
-    "path": "folders/Sprites/Player Sprites.yy",
+    "name": "Normal movements",
+    "path": "folders/Sprites/Player Sprites/Normal movements.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

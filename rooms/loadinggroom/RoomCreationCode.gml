@@ -4,6 +4,9 @@ room_speed = 240
 enum states {
 	normal,
 	jump,
+	freefallstart,
+	freefall,
+	freefallend,
 }
 enum particle {
 	dust,

@@ -6,6 +6,11 @@ function scr_player_jump(){
     var deccel = 0.1
     var jumpspeed = -11
     var machspeed = 6
+    if (dir != xscale)
+    {
+        dir = xscale
+        movespeed = turnmovespeed
+    }
 	move = key_left + key_right
     landAnim = true
     if (!momentum)
@@ -44,8 +49,10 @@ function scr_player_jump(){
         }
     }
 	if (grounded && vsp > 0) {
+		landAnim = true
 		state = states.normal
 		jumpstop = false
+		image_index = 0
 		particle_create(x, y, particle.landcloud)
 	}
 	if (sprite_index == spr_jump && floor(image_index) == image_number - 1) {

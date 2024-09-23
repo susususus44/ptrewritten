@@ -7,6 +7,11 @@ function scr_player_normal(){
     var idlespr = spr_idle
     var movespr = spr_move
 	move = key_left + key_right
+    if (dir != xscale)
+    {
+        dir = xscale
+        movespeed = 2
+    }
 	if (move != 0) {
 		sprite_index = movespr
         if (move != 0)
@@ -38,15 +43,40 @@ function scr_player_normal(){
 	}
     if (movespeed > maxmovespeed)
         movespeed -= deccel
+	if landAnim
+    {
+            if (move == 0)
+            {
+                movespeed = 0
+                sprite_index = spr_land
+                if (floor(image_index) == (image_number - 1))
+                    landAnim = false
+            }
+            else
+            {
+                sprite_index = spr_land2
+                if (floor(image_index) == (image_number - 1))
+                {
+                    landAnim = false
+                    sprite_index = movespr
+                    image_index = 0
+                }
+            }
+    }
 	hsp = move * movespeed
 	if (grounded) {
 		if (key_jump) {
 			state = states.jump
 			vsp = jumpspeed
-			sprite_index = spr_player_jump
+			sprite_index = spr_jump
 			image_index = 0
 			image_speed = 0.35
 			particle_create(x, y, particle.jumpcloud)
 		}
+	}
+	if (!grounded) {
+		state = states.jump
+		jumpstop = true
+		sprite_index = spr_fall
 	}
 }

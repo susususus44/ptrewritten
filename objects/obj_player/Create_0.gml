@@ -10,4 +10,6 @@ alpha = 1
 momentum = false
 jumpstop = false
 steppybuffer = 12
+dir = 1
+landAnim = false
 mask_index = spr_player_mask
