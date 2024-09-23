@@ -1,3 +1,3 @@
-function scr_solid(_x, _y, obj = obj_solid) {
-	return place_meeting_solid(_x, _y, obj)
+function scr_solid(_x, _y){
+	return place_meeting(_x, _y, obj_solid)
 }

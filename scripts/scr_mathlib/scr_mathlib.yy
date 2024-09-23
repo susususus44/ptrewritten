@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "ptranslate",
+  "name": "scr_mathlib",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Collisions",
-    "path": "folders/Scripts/Collisions.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
 }

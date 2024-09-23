@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "ptranslate",
+  "name": "scr_collision_init",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
