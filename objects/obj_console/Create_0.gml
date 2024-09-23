@@ -1,0 +1,16 @@
+str = ""
+surf = -1
+history = []
+length = 0
+opened = false
+showcursor = false
+lerpto = 0
+lerppos = 0
+scrollto = 0
+scrollpos = 0
+failed = false
+command_list = ["room_goto <room>", "instance_create <x> <y> <depth> <obj>"]
+search = []
+prevstr = []
+depth = -1000
+alarm[0] = 20
