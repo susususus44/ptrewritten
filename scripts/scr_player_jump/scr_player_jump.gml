@@ -58,4 +58,12 @@ function scr_player_jump(){
 	if (sprite_index == spr_jump && floor(image_index) == image_number - 1) {
 		sprite_index = spr_fall
 	}
+    if (key_down2)
+    {
+		sprite_index = spr_bodyslamstart
+        image_index = 0
+        state = states.freefall
+		state = states.freefall
+        vsp = -6
+	}
 }

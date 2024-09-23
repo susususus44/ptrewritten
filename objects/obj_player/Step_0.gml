@@ -7,4 +7,10 @@ switch (state) {
 	case states.jump: 
 		scr_player_jump()
 		break
+	case states.freefall:
+		scr_player_freefall()
+		break
+	case states.freefallend:
+		scr_player_freefallend()
+		break
 }

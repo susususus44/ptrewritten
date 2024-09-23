@@ -40,8 +40,9 @@ function scr_collision() {
     }
 	if (detect && vsp > 0)
 		vsp = 0;
-	else
+	else {
 		y += vsp
-	vsp += grav
+		vsp += grav
+	}
     grounded = place_meeting(x, y + 1, obj_solid) || place_meeting(x, y + 1, obj_platform)
 }

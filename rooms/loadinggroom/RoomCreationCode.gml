@@ -12,4 +12,5 @@ enum particle {
 	dust,
 	jumpcloud,
 	landcloud,
+	gpeffect,
 }

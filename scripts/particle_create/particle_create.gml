@@ -15,6 +15,9 @@ function getspr(_state, _getinf) {
 			case particle.landcloud:
 				return spr_landcloud
 				break
+			case particle.gpeffect:
+				return spr_groundpoundeffect
+				break
 			default:
 				return spr_cloudeffect;
 				break
@@ -22,6 +25,9 @@ function getspr(_state, _getinf) {
 		break
 		case getinf.imgsp:
 		switch (_state) {
+			case particle.gpeffect:
+				return 0.35
+				break
 			default:
 				return 0.5;
 				break
