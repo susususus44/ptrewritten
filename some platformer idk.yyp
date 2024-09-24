@@ -55,6 +55,7 @@
     {"id":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},},
     {"id":{"name":"scr_player_freefallstart","path":"scripts/scr_player_freefallstart/scr_player_freefallstart.yy",},},
     {"id":{"name":"font_console","path":"fonts/font_console/font_console.yy",},},
+    {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},},
     {"id":{"name":"scr_retro_pal_swapper","path":"scripts/scr_retro_pal_swapper/scr_retro_pal_swapper.yy",},},
     {"id":{"name":"spr_baddiemask","path":"sprites/spr_baddiemask/spr_baddiemask.yy",},},
     {"id":{"name":"spr_baddie","path":"sprites/spr_baddie/spr_baddie.yy",},},

@@ -30,6 +30,7 @@
     {"name":"scr_getinput","order":2,"path":"scripts/scr_getinput/scr_getinput.yy",},
     {"name":"obj_platform","order":2,"path":"objects/obj_platform/obj_platform.yy",},
     {"name":"scr_player_freefallstart","order":2,"path":"scripts/scr_player_freefallstart/scr_player_freefallstart.yy",},
+    {"name":"obj_pause","order":7,"path":"objects/obj_pause/obj_pause.yy",},
     {"name":"scr_retro_pal_swapper","order":2,"path":"scripts/scr_retro_pal_swapper/scr_retro_pal_swapper.yy",},
     {"name":"spr_baddiemask","order":7,"path":"sprites/spr_baddiemask/spr_baddiemask.yy",},
     {"name":"spr_baddie","order":6,"path":"sprites/spr_baddie/spr_baddie.yy",},
