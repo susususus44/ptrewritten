@@ -1,6 +1,10 @@
 pause_menu = ds_list_create()
 paused = false
 selected = 0
+move = 0
+pausespr = -4
+start  = false
+fade = 0
 ds_list_add(pause_menu, ["pause_resume", function() {
 	paused = false
 	instance_activate_all()

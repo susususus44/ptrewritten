@@ -14,3 +14,4 @@ steppybuffer = 12
 dir = 1
 landAnim = false
 mask_index = spr_player_mask
+global.bigfont = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ!¡¿?.1234567890:ÁÄÃÀÂÉÈÊËÍÌÎÏÓÖÕÔÒÚÙÛÜÇ+", true, 0)
