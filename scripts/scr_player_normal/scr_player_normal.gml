@@ -64,8 +64,15 @@ function scr_player_normal(){
             }
     }
 	hsp = move * movespeed
+	if (!grounded && !place_meeting(x, y, obj_slope)) {
+		state = states.jump
+		jumpstop = true
+		sprite_index = spr_fall
+	}
 	if (grounded) {
+		grav = 1
 		if (key_jump) {
+			grav = 0.5
 			state = states.jump
 			vsp = jumpspeed
 			sprite_index = spr_jump
@@ -73,10 +80,5 @@ function scr_player_normal(){
 			image_speed = 0.35
 			particle_create(x, y, particle.jumpcloud)
 		}
-	}
-	if (!grounded) {
-		state = states.jump
-		jumpstop = true
-		sprite_index = spr_fall
 	}
 }

@@ -13,7 +13,8 @@ if (keyboard_check_pressed(vk_escape) && !paused) {
 	instance_deactivate_all(true)
 }
 if (paused) {
-	selected -= (key_up - key_down)
+	scr_pauseicon_update(selected)
+	selected -= (key_up2 - key_down2)
 	if (key_jump) {
 		ds_list_find_value(pause_menu, selected)[1]()
 	}

@@ -1,5 +1,7 @@
 function scr_collision() {
 	//collisions created by monoe while i figure em out
+	var realgrav = grav
+	var serious = false
     if (place_meeting(x + hsp, y, (obj_solid))) {
         yplus = 0;
         while (place_meeting(x + hsp, y - yplus, obj_solid) && yplus <= abs(1 * hsp))
@@ -23,7 +25,7 @@ function scr_collision() {
     else {
         detect = 0;
     }
-	while (place_meeting(x, y + vsp, obj_platform) && vsp > 0) {
+	while (place_meeting(x, y + vsp-1, obj_platform) && vsp > 0) {
 		vsp--
 		detect = true
 	}
@@ -42,7 +44,8 @@ function scr_collision() {
 		vsp = 0;
 	else {
 		y += vsp
-		vsp += grav
+		vsp += realgrav
 	}
-    grounded = place_meeting(x, y + 1, obj_solid) || place_meeting(x, y + 1, obj_platform)
+    grounded = place_meeting(x, y + 1, obj_solid) || place_meeting(x, y + 1, obj_platform) || detect
+
 }
