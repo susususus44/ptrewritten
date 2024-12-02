@@ -20,6 +20,7 @@ gameframe_syscommand_raw(buffer_get_address(_buf), 8);
 var _buf = gameframe_prepare_buffer(1);
 return gameframe_get_monitors_1_raw(buffer_get_address(_buf), 1);
 
+#define gameframe_get_double_click_time
 /// gameframe_get_double_click_time()->int
 var _buf = gameframe_prepare_buffer(1);
 return gameframe_get_double_click_time_raw(buffer_get_address(_buf), 1);
