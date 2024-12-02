@@ -14,3 +14,7 @@ switch (state) {
 		scr_player_freefallend()
 		break
 }
+if y > room_height {
+	y = roomstarty
+	x = roomstartx
+}

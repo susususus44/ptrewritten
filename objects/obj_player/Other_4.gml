@@ -1,0 +1,2 @@
+roomstartx = x
+roomstarty = y
