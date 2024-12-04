@@ -1,8 +1,8 @@
 function scr_player_normal(){
 	var maxmovespeed = 8
-    var maxmovespeed2 = 6
-    var accel = 0.5
-    var deccel = 0.1
+    var maxmovespeed2 = 9
+    var accel = 1
+    var deccel = 0.7
     var jumpspeed = -11
     var idlespr = spr_idle
     var movespr = spr_move
@@ -49,8 +49,11 @@ function scr_player_normal(){
             {
                 movespeed = 0
                 sprite_index = spr_land
-                if (floor(image_index) == (image_number - 1))
+                if (floor(image_index) == (image_number - 1)) {
                     landAnim = false
+					sprite_index = idlespr
+					image_index = 0
+				}
             }
             else
             {
@@ -79,6 +82,7 @@ function scr_player_normal(){
 			image_index = 0
 			image_speed = 0.35
 			particle_create(x, y, particle.jumpcloud)
+			audio_play_sound(sfx_jump, 1, false)
 		}
 	}
 }

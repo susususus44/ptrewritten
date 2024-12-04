@@ -1,9 +1,9 @@
 function scr_player_jump(){
-	var maxmovespeed = 8
-    var maxmovespeed2 = 6
+	var maxmovespeed = 7
+    var maxmovespeed2 = 8
     var turnmovespeed = 2
-    var accel = 0.5
-    var deccel = 0.1
+    var accel = 0.8
+    var deccel = 0.5
     var jumpspeed = -11
     var machspeed = 6
     if (dir != xscale)
@@ -12,7 +12,6 @@ function scr_player_jump(){
         movespeed = turnmovespeed
     }
 	move = key_left + key_right
-    landAnim = true
     if (!momentum)
         hsp = move * movespeed
     else
@@ -49,7 +48,6 @@ function scr_player_jump(){
         }
     }
 	if (grounded && vsp > 0) {
-		landAnim = true
 		state = states.normal
 		jumpstop = false
 		image_index = 0
@@ -64,6 +62,6 @@ function scr_player_jump(){
         image_index = 0
         state = states.freefall
 		state = states.freefall
-        vsp = -6
+        vsp = -12
 	}
 }

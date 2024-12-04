@@ -1,6 +1,6 @@
 function scr_player_freefall(){
 	    move = key_left + key_right
-	if (vsp >= 2)
+	if (vsp >= 0)
     {
         if (steppybuffer > 0)
             steppybuffer--
@@ -9,7 +9,9 @@ function scr_player_freefall(){
             particle_create((x + (irandom_range(-25, 25))), (y + (irandom_range(-10, 35))), particle.dust)
             steppybuffer = 8
         }
-        vsp += 0.5
+        vsp += 1.5
+		if (vsp > 20)
+			vsp = 40
     }
 	landAnim = true
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_bodyslamstart)
@@ -31,7 +33,7 @@ function scr_player_freefall(){
             movespeed = 0
         }
         if (move != 0 && movespeed < 7)
-            movespeed += 0.25
+            movespeed += 0.6
         if (movespeed > 7)
             movespeed -= 0.05
         if ((scr_solid((x + 1), y) && move == 1) || (scr_solid((x - 1), y) && move == -1))
@@ -40,9 +42,8 @@ function scr_player_freefall(){
             xscale = move
     }
 	if (grounded && vsp > 0) {
-            sprite_index = spr_bodyslamend
             image_index = 0
-            state = states.freefallend
+            state = states.normal
             jumpstop = false
             with (obj_camera)
             {

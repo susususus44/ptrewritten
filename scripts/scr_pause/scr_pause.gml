@@ -11,6 +11,11 @@ function scr_pauseicon_add(spr, img, xoffset = 0, yoffset = 0) {
 	}
 	)
 }
+function draw_sprite_inverted(_spr, _img, _x, _y, _xscale, _yscale, _rot, _alpha){
+    gpu_set_blendmode_ext(bm_inv_dest_colour,bm_zero);
+    draw_sprite_ext(_spr,_img,_x,_y,_xscale,_yscale,_rot,c_white,_alpha);
+    gpu_set_blendmode(bm_normal);
+}
 function scr_pauseicon_update(selected) {
 	for (var i = 0; i < ds_list_size(pauseicon); i++) {
 		with(ds_list_find_value(pauseicon, i)) {
